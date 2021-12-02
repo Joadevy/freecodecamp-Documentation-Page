@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC: SASS Documentation</title>
+    <link rel="stylesheet" type="text/css" href="src/css/styles.css">
+</head>
+<body>
+    
+    <aside></aside>
+
+    <main id="main-doc">
+        <section class="main-section" id="¿What_is_Sass?">
+            <header>¿What is Sass?</header>
+            <p>Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins, functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets well-organized and makes it easy to share design within and across projects.</p>
+        </section>
+
+        <section class="main-section" id="Style_Rules">
+            <header>Style Rules</header>
+            <p>Style rules are the foundation of Sass, just like they are for CSS. And they work the same way: you choose which elements to style with a selector, and declare properties that affect how those elements look</p>
+            <div class="text-code"> 
+                <ul class="container-property">
+                    <li class="css-class">.button {
+                        <ul class="container-property">
+                            <li class="css-property"><span class="name-property">padding:</span> 3px 10px;</li>
+                            <li class="css-property"><span class="name-property">font-size:</span> 12px;</li>
+                            <li class="css-property"><span class="name-property">border-radius:</span> 3px;</li>
+                            <li class="css-property"><span class="name-property">border:</span> 3px solid #e1e4e8;</li>
+                        </ul>
+                    }</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main-section" id="Nesting">
+            <header>Nesting</header>
+            <p>But Sass wants to make your life easier. Rather than repeating the same selectors over and over again, you can write one style rules inside another. Sass will automatically combine the outer rule’s selector with the inner rule’s.</p>
+            <div class="text-code">
+                <ul class="container-property">
+                    <li class="css-class">nav {
+
+                        <ul class="container-property"> 
+                            <li class="css-class">ul {
+                                <ul>
+                                <li class="css-property"><span class="name-property">margin:</span> 0;</li>
+                                <li class="css-property"><span class="name-property">padding:</span> 0;</li>
+                                <li class="css-property"><span class="name-property">list-style:</span> none;</li>
+                                </ul>
+                            }</li>
+                        </ul>
+
+                        <ul class="container-property">
+                            <li class="css-class">li {
+                                <ul>
+                                    <li class="css-property"><span class="name-property">display:</span> inline-block;</li>
+                                </ul> 
+                            }</li>
+                        </ul>
+
+                        <ul class="container-property">
+                            <li class="css-clas">a {
+                                <ul>
+                                    <li class="css-property"><span class="name-property">display:</span> block;</li>
+                                    <li class="css-property"><span class="name-property">padding:</span> 6px 12px;</li>
+                                    <li class="css-property"><span class="name-property">text-decoration:</span> none;</li>
+                                </ul>    
+                            }</li>
+                        </ul>
+
+                    }</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main-section" id="">
+            <header></header>
+            <p></p>
+        </section>
+
+        <section class="main-section" id="">
+            <header></header>
+            <p></p>
+        </section>
+    </main>
+
+    <footer></footer>
+
+</body>
+</html>
