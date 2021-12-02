@@ -19,7 +19,8 @@
 
         <section class="main-section" id="Style_Rules">
             <header>Style Rules</header>
-            <p>Style rules are the foundation of Sass, just like they are for CSS. And they work the same way: you choose which elements to style with a selector, and declare properties that affect how those elements look</p>
+            <article>
+                <p>Style rules are the foundation of Sass, just like they are for CSS. And they work the same way: you choose which elements to style with a selector, and declare properties that affect how those elements look</p>
             <div class="text-code"> 
                 <ul class="container-property">
                     <li class="css-class">.button {
@@ -32,11 +33,13 @@
                     }</li>
                 </ul>
             </div>
+            </article>
         </section>
 
         <section class="main-section" id="Nesting">
             <header>Nesting</header>
-            <p>But Sass wants to make your life easier. Rather than repeating the same selectors over and over again, you can write one style rules inside another. Sass will automatically combine the outer rule’s selector with the inner rule’s.</p>
+            <article>
+                <p>But Sass wants to make your life easier. Rather than repeating the same selectors over and over again, you can write one style rules inside another. Sass will automatically combine the outer rule’s selector with the inner rule’s.</p>
             <div class="text-code">
                 <ul class="container-property">
                     <li class="css-class">nav {
@@ -72,67 +75,84 @@
                     }</li>
                 </ul>
             </div>
+            </article>
         </section>
 
         <section class="main-section" id="Variables">
             <header>Variables</header>
-            <p>A variable declaration looks a lot like a property declaration: it’s written <variable>: <expression>. Unlike a property, which can only be declared in a style rule or at-rule, variables can be declared anywhere you want. To use a variable, just include it in a value.</p>
-            <div class="text-code">
-                <ul class="container-property">
-                    <li class="css-class">$base-color: #c6538c;</li>
-                    <li class="css-class">$border-dark: rgba($base-color, 0.88);</li>
-                </ul>
-
-                <ul class="container-property">
-                    <li class="css-class">.alert {
-                        <ul>
-                            <li class="css-property"><span class="name-property">border:</span> 1px solid $border-dark;</li>
+            <article>
+                <p>A variable declaration looks a lot like a property declaration: it’s written <variable>: <expression>. Unlike a property, which can only be declared in a style rule or at-rule, variables can be declared anywhere you want. To use a variable, just include it in a value.</p>
+                    <div class="text-code">
+                        <ul class="container-property">
+                            <li class="css-class">$base-color: #c6538c;</li>
+                            <li class="css-class">$border-dark: rgba($base-color, 0.88);</li>
                         </ul>
-                    }</li>
-                </ul>
-            </div>
+        
+                        <ul class="container-property">
+                            <li class="css-class">.alert {
+                                <ul>
+                                    <li class="css-property"><span class="name-property">border:</span> 1px solid $border-dark;</li>
+                                </ul>
+                            }</li>
+                        </ul>
+                    </div>
+            </article>
         </section>
 
         <section class="main-section" id="Mixins">
             <header>Mixins</header>
-            <p>Mixins allow you to define styles that can be re-used throughout your stylesheet. They make it easy to avoid using non-semantic classes like .float-left, and to distribute collections of styles in libraries.<br>
-            Mixins are defined using the <span class="highlited-text">@mixin at-rule</span>, which is written <span class="highlited-text">@mixin <name> { ... }</span> or <span class="highlited-text">@mixin name(<arguments...>) { ... }</span>. A mixin’s name can be any Sass identifier, and it can contain any statement other than top-level statements. They can be used to encapsulate styles that can be dropped into a single style rule; they can contain style rules of their own that can be nested in other rules or included at the top level of the stylesheet; or they can just serve to modify variables.
-            Mixins are included into the current context using the <span class="highlited-text">@include</span> at-rule, which is written <span class="highlited-text">@include <name></span> or <span class="highlited text">@include <name>(<arguments...>)</span>, with the name of the mixin being included.</p>
-        
-            <div class="text-code">
-                <ul class="container-property">
-                    <li class="css-class">@mixin reset-list {
-                        <ul>
-                            <li class="css-property"><span class="name-property">margin:</span> 0;</li>
-                            <li class="css-property"><span class="name-property">padding:</span> 0;</li>
-                            <li class="css-property"><span class="name-property">list-style:</span> none;</li>
-                        </ul>
-                    }</li>
-                </ul>
-
-                <ul class="container-property">
-                    <li class="css-class">@mixin horizontal-list{
-                        <ul>
-                            <li class="css-class">@include reset-list;</li>
-                            <li class="css-class">li {
-                                    <ul>
-                                        <li class="css-property"><span class="name-property">display:</span> inline-block;</li>
-                                        <li class="css-property"><span class="name-property">margin:</span> 2rem;</li>
-                                    </ul>
+            <article>
+                <p>Mixins allow you to define styles that can be re-used throughout your stylesheet. They make it easy to avoid using non-semantic classes like .float-left, and to distribute collections of styles in libraries.<br>
+                    Mixins are defined using the <span class="highlited-text">@mixin at-rule</span>, which is written <span class="highlited-text">@mixin <name> { ... }</span> or <span class="highlited-text">@mixin name(<arguments...>) { ... }</span>. A mixin’s name can be any Sass identifier, and it can contain any statement other than top-level statements. They can be used to encapsulate styles that can be dropped into a single style rule; they can contain style rules of their own that can be nested in other rules or included at the top level of the stylesheet; or they can just serve to modify variables.
+                    Mixins are included into the current context using the <span class="highlited-text">@include</span> at-rule, which is written <span class="highlited-text">@include <name></span> or <span class="highlited text">@include <name>(<arguments...>)</span>, with the name of the mixin being included.</p>
+                
+                    <div class="text-code">
+                        <ul class="container-property">
+                            <li class="css-class">@mixin reset-list {
+                                <ul>
+                                    <li class="css-property"><span class="name-property">margin:</span> 0;</li>
+                                    <li class="css-property"><span class="name-property">padding:</span> 0;</li>
+                                    <li class="css-property"><span class="name-property">list-style:</span> none;</li>
+                                </ul>
                             }</li>
                         </ul>
-                    }</li>
-                </ul>
-
-                <ul class="container-property">
-                    <li class="css-class">nav ul{
-                        <ul>
-                            <li><span class="highlited-text">@include</span> horizontal-list;</li>
+        
+                        <ul class="container-property">
+                            <li class="css-class">@mixin horizontal-list{
+                                <ul>
+                                    <li class="css-class">@include reset-list;</li>
+                                    <li class="css-class">li {
+                                            <ul>
+                                                <li class="css-property"><span class="name-property">display:</span> inline-block;</li>
+                                                <li class="css-property"><span class="name-property">margin:</span> 2rem;</li>
+                                            </ul>
+                                    }</li>
+                                </ul>
+                            }</li>
                         </ul>
-                    }</li>
-                </ul>
-            </div>
+        
+                        <ul class="container-property">
+                            <li class="css-class">nav ul{
+                                <ul>
+                                    <li><span class="highlited-text">@include</span> horizontal-list;</li>
+                                </ul>
+                            }</li>
+                        </ul>
+                    </div>
+            </article>
+        </section>
 
+        <section class="main-section" id="Extend">
+            <header>Extend</header>
+            <article>
+                <p></p>
+                <div class="text-code">
+                </div>
+                <p></p>
+                <div class="text-code">
+                </div>
+                <p></p>
+            </article>    
         </section>
     </main>
 
