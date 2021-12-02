@@ -93,9 +93,46 @@
             </div>
         </section>
 
-        <section class="main-section" id="">
-            <header></header>
-            <p></p>
+        <section class="main-section" id="Mixins">
+            <header>Mixins</header>
+            <p>Mixins allow you to define styles that can be re-used throughout your stylesheet. They make it easy to avoid using non-semantic classes like .float-left, and to distribute collections of styles in libraries.<br>
+            Mixins are defined using the <span class="highlited-text">@mixin at-rule</span>, which is written <span class="highlited-text">@mixin <name> { ... }</span> or <span class="highlited-text">@mixin name(<arguments...>) { ... }</span>. A mixin’s name can be any Sass identifier, and it can contain any statement other than top-level statements. They can be used to encapsulate styles that can be dropped into a single style rule; they can contain style rules of their own that can be nested in other rules or included at the top level of the stylesheet; or they can just serve to modify variables.
+            Mixins are included into the current context using the <span class="highlited-text">@include</span> at-rule, which is written <span class="highlited-text">@include <name></span> or <span class="highlited text">@include <name>(<arguments...>)</span>, with the name of the mixin being included.</p>
+        
+            <div class="text-code">
+                <ul class="container-property">
+                    <li class="css-class">@mixin reset-list {
+                        <ul>
+                            <li class="css-property"><span class="name-property">margin:</span> 0;</li>
+                            <li class="css-property"><span class="name-property">padding:</span> 0;</li>
+                            <li class="css-property"><span class="name-property">list-style:</span> none;</li>
+                        </ul>
+                    }</li>
+                </ul>
+
+                <ul class="container-property">
+                    <li class="css-class">@mixin horizontal-list{
+                        <ul>
+                            <li class="css-class">@include reset-list;</li>
+                            <li class="css-class">li {
+                                    <ul>
+                                        <li class="css-property"><span class="name-property">display:</span> inline-block;</li>
+                                        <li class="css-property"><span class="name-property">margin:</span> 2rem;</li>
+                                    </ul>
+                            }</li>
+                        </ul>
+                    }</li>
+                </ul>
+
+                <ul class="container-property">
+                    <li class="css-class">nav ul{
+                        <ul>
+                            <li><span class="highlited-text">@include</span> horizontal-list;</li>
+                        </ul>
+                    }</li>
+                </ul>
+            </div>
+
         </section>
     </main>
 
