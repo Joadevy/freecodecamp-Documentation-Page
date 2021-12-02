@@ -74,9 +74,23 @@
             </div>
         </section>
 
-        <section class="main-section" id="">
-            <header></header>
-            <p></p>
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <p>A variable declaration looks a lot like a property declaration: it’s written <variable>: <expression>. Unlike a property, which can only be declared in a style rule or at-rule, variables can be declared anywhere you want. To use a variable, just include it in a value.</p>
+            <div class="text-code">
+                <ul class="container-property">
+                    <li class="css-class">$base-color: #c6538c;</li>
+                    <li class="css-class">$border-dark: rgba($base-color, 0.88);</li>
+                </ul>
+
+                <ul class="container-property">
+                    <li class="css-class">.alert {
+                        <ul>
+                            <li class="css-property"><span class="name-property">border:</span> 1px solid $border-dark;</li>
+                        </ul>
+                    }</li>
+                </ul>
+            </div>
         </section>
 
         <section class="main-section" id="">
