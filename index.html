@@ -21,12 +21,10 @@
             <a href="#Variables" class="nav-link">Variables</a>
             <a href="#Mixins" class="nav-link">Mixins</a>
             <a href="#Extend" class="nav-link">Extend</a>
+            <a href="#Use" class="nav-link">Use</a>
+            <a href="#Forward" class="nav-link">Forward</a> 
             <a href="#Import" class="nav-link">Import</a>
-            <a href="#Reference" class="nav-link">Reference</a>  
-            <a href="#Reference" class="nav-link">Reference</a> 
-            <a href="#Reference" class="nav-link">Reference</a> 
-            <a href="#Reference" class="nav-link">Reference</a> 
-            <a href="#Reference" class="nav-link">Reference</a> 
+            <a href="#Operators" class="nav-link">Operators</a>  
             <a href="#Reference" class="nav-link">Reference</a> 
         </nav>
     </aside>
@@ -205,6 +203,18 @@
                 <p>Extends are resolved after the rest of your stylesheet is compiled. In particular, it happens after <span class="highlited-text">parent selectors</span> are resolved. This means that if you <span class="highlited-text">@extend .error</span>, it won’t affect the inner selector in <span class="highlited-text">.error { &__icon { ... } }</span>. It also means that parent selectors in SassScript can’t see the results of extend.</p>
             </article>    
         </section>
+        
+        <section class="main-section" id="Use">
+            <head>Use</head>
+            <p>The <span highlited-text>@use</span> rule loads mixins, functions, and variables from other Sass stylesheets, and combines CSS from multiple stylesheets together. Stylesheets loaded by <span class="highlited-text">@use</span> are called "modules". Sass also provides built-in modules full of useful functions.</p>
+            <p>The simplest <span class="highlited-text">@use</span> rule is written <span class="highlited-text">@use "<url>"</span>, which loads the module at the given URL. Any styles loaded this way will be included exactly once in the compiled CSS output, no matter how many times those styles are loaded.</p>
+        </section>
+
+        <section class="main-section" id="Forward">
+            <header>Forward</header>
+            <p>The <span class="highlited-text">@forward</span> rule loads a Sass stylesheet and makes its mixins, functions, and variables available when your stylesheet is loaded with the <span class="highlited-text">@use</span> rule. It makes it possible to organize Sass libraries across many files, while allowing their users to load a single entrypoint file.</p>
+            <p>The rule is written <span class="highlited-text">@forward "<url>"</span>. It loads the module at the given URL just like <span class="highlited-text">@use</span>, but it makes the public members of the loaded module available to users of your module as though they were defined directly in your module. Those members aren’t available in your module, though—if you want that, you’ll need to write a @use rule as well. Don’t worry, it’ll only load the module once!</p>
+        </section>
 
         <section class="main-section" id="Import">
             <header>Import</header>
@@ -214,6 +224,18 @@
                 <h3>Heads Up!</h3>
                 <p>The Sass team discourages the continued use of the @import rule. Sass will gradually phase it out over the next few years, and eventually remove it from the language entirely. Prefer the @use rule instead. (Note that only Dart Sass currently supports @use. Users of other implementations must use the @import rule instead.)</p>
             </article>
+        </section>
+
+        <section class="main-section" id="Operators">
+            <header>Operators</header>
+            <p>Sass supports a handful of useful <span class="highlited-text">operators</span> for working with different values. These include the standard mathematical operators like <span class="highlited-text">+</span> and <span class="highlited-text">*</span>, as well as operators for various other types:</p>
+            <ul>
+                <li>== >and != are used to check if two values are the same.</li>
+                <li>+, -, *, /, and % have their usual mathematical meaning for numbers, with special behaviors for units that matches the use of units in scientific math.</li>
+                <li><, <=, >, and >= check whether two numbers are greater or less than one another</li>
+                <li>and, or, and not have the usual boolean behavior. Sass considers every value “true” except for false and null.</li>
+                <li>+, -, and / can be used to concatenate strings.</li>
+            </ul>
         </section>
 
         <section class="main-section" id="Reference">

@@ -7,8 +7,12 @@ p {
   opacity: 65%;
 }
 
-li {
+code .css-class, code .css-property {
   opacity: 87%;
+}
+
+li {
+  opacity: 65%;
 }
 
 #navbar a {
