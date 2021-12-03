@@ -36,18 +36,18 @@
             <header>Style Rules</header>
             <article>
                 <p>Style rules are the foundation of Sass, just like they are for CSS. And they work the same way: you choose which elements to style with a selector, and declare properties that affect how those elements look</p>
-            <div class="text-code"> 
+            <code class="text-code"> 
                 <ul class="container-property">
                     <li class="css-class">.button {
                         <ul class="container-property">
-                            <li class="css-property"><code class="name-property">padding:</code> 3px 10px;</li>
-                            <li class="css-property"><code class="name-property">font-size:</code> 12px;</li>
-                            <li class="css-property"><code class="name-property">border-radius:</code> 3px;</li>
-                            <li class="css-property"><code class="name-property">border:</code> 3px solid #e1e4e8;</li>
+                            <li class="css-property"><span class="name-property">padding:</span> 3px 10px;</li>
+                            <li class="css-property"><span class="name-property">font-size:</span> 12px;</li>
+                            <li class="css-property"><span class="name-property">border-radius:</span> 3px;</li>
+                            <li class="css-property"><span class="name-property">border:</span> 3px solid #e1e4e8;</li>
                         </ul>
                     }</li>
                 </ul>
-            </div>
+            </code>
             </article>
         </section>
 
@@ -55,16 +55,16 @@
             <header>Nesting</header>
             <article>
                 <p>But Sass wants to make your life easier. Rather than repeating the same selectors over and over again, you can write one style rules inside another. Sass will automatically combine the outer rule’s selector with the inner rule’s.</p>
-            <div class="text-code">
+            <code class="text-code">
                 <ul class="container-property">
                     <li class="css-class">nav {
 
                         <ul class="container-property"> 
                             <li class="css-class">ul {
                                 <ul>
-                                <li class="css-property"><code class="name-property">margin:</code> 0;</li>
-                                <li class="css-property"><code class="name-property">padding:</code> 0;</li>
-                                <li class="css-property"><code class="name-property">list-style:</code> none;</li>
+                                <li class="css-property"><span class="name-property">margin:</span> 0;</li>
+                                <li class="css-property"><span class="name-property">padding:</span> 0;</li>
+                                <li class="css-property"><span class="name-property">list-style:</span> none;</li>
                                 </ul>
                             }</li>
                         </ul>
@@ -72,7 +72,7 @@
                         <ul class="container-property">
                             <li class="css-class">li {
                                 <ul>
-                                    <li class="css-property"><code class="name-property">display:</code> inline-block;</li>
+                                    <li class="css-property"><span class="name-property">display:</span> inline-block;</li>
                                 </ul> 
                             }</li>
                         </ul>
@@ -80,16 +80,16 @@
                         <ul class="container-property">
                             <li class="css-clas">a {
                                 <ul>
-                                    <li class="css-property"><code class="name-property">display:</code> block;</li>
-                                    <li class="css-property"><code class="name-property">padding:</code> 6px 12px;</li>
-                                    <li class="css-property"><code class="name-property">text-decoration:</code> none;</li>
+                                    <li class="css-property"><span class="name-property">display:</span> block;</li>
+                                    <li class="css-property"><span class="name-property">padding:</span> 6px 12px;</li>
+                                    <li class="css-property"><span class="name-property">text-decoration:</span> none;</li>
                                 </ul>    
                             }</li>
                         </ul>
 
                     }</li>
                 </ul>
-            </div>
+            </code>
             </article>
         </section>
 
@@ -97,7 +97,7 @@
             <header>Variables</header>
             <article>
                 <p>A variable declaration looks a lot like a property declaration: it’s written <variable>: <expression>. Unlike a property, which can only be declared in a style rule or at-rule, variables can be declared anywhere you want. To use a variable, just include it in a value.</p>
-                    <div class="text-code">
+                    <code class="text-code">
                         <ul class="container-property">
                             <li class="css-class">$base-color: #c6538c;</li>
                             <li class="css-class">$border-dark: rgba($base-color, 0.88);</li>
@@ -106,11 +106,11 @@
                         <ul class="container-property">
                             <li class="css-class">.alert {
                                 <ul>
-                                    <li class="css-property"><code class="name-property">border:</code> 1px solid $border-dark;</li>
+                                    <li class="css-property"><span class="name-property">border:</span> 1px solid $border-dark;</li>
                                 </ul>
                             }</li>
                         </ul>
-                    </div>
+                    </code>
             </article>
         </section>
 
@@ -121,13 +121,13 @@
                     Mixins are defined using the <span class="highlited-text">@mixin at-rule</span>, which is written <span class="highlited-text">@mixin <name> { ... }</span> or <span class="highlited-text">@mixin name(<arguments...>) { ... }</span>. A mixin’s name can be any Sass identifier, and it can contain any statement other than top-level statements. They can be used to encapsulate styles that can be dropped into a single style rule; they can contain style rules of their own that can be nested in other rules or included at the top level of the stylesheet; or they can just serve to modify variables.
                     Mixins are included into the current context using the <span class="highlited-text">@include</span> at-rule, which is written <span class="highlited-text">@include <name></span> or <span class="highlited text">@include <name>(<arguments...>)</span>, with the name of the mixin being included.</p>
                 
-                    <div class="text-code">
+                    <code class="text-code">
                         <ul class="container-property">
                             <li class="css-class">@mixin reset-list {
                                 <ul>
-                                    <li class="css-property"><code class="name-property">margin:</code> 0;</li>
-                                    <li class="css-property"><code class="name-property">padding:</code> 0;</li>
-                                    <li class="css-property"><code class="name-property">list-style:</code> none;</li>
+                                    <li class="css-property"><span class="name-property">margin:</span> 0;</li>
+                                    <li class="css-property"><span class="name-property">padding:</span> 0;</li>
+                                    <li class="css-property"><span class="name-property">list-style:</span> none;</li>
                                 </ul>
                             }</li>
                         </ul>
@@ -138,8 +138,8 @@
                                     <li class="css-class">@include reset-list;</li>
                                     <li class="css-class">li {
                                             <ul>
-                                                <li class="css-property"><code class="name-property">display:</code> inline-block;</li>
-                                                <li class="css-property"><code class="name-property">margin:</code> 2rem;</li>
+                                                <li class="css-property"><span class="name-property">display:</span> inline-block;</li>
+                                                <li class="css-property"><span class="name-property">margin:</span> 2rem;</li>
                                             </ul>
                                     }</li>
                                 </ul>
@@ -149,11 +149,11 @@
                         <ul class="container-property">
                             <li class="css-class">nav ul{
                                 <ul>
-                                    <li><code class="highlited-text">@include</code> horizontal-list;</li>
+                                    <li><span class="highlited-text">@include</span> horizontal-list;</li>
                                 </ul>
                             }</li>
                         </ul>
-                    </div>
+                    </code>
             </article>
         </section>
 
@@ -161,41 +161,41 @@
             <header>Extend</header>
             <article>
                 <p>There are often cases when designing a page when one class should have all the styles of another class, as well as its own specific styles. For example, the BEM methodology encourages modifier classes that go on the same elements as block or element classes. But this can create cluttered HTML, it's prone to errors from forgetting to include both classes, and it can bring non-semantic style concerns into your markup. Sass’s @extend rule solves this. It’s written @extend <selector>, and it tells Sass that one selector should inherit the styles of another.</p>
-                <div class="text-code">
+                <code class="text-code">
                     <ul class="container-property">
                         <li class="css-class">.error {
                             <ul>
-                                <li class="css-property"><code class="name-property">border:</code> 1px #f98;</li>
-                                <li class="css-property"><code class="name-property">background-color:</code> #fdd;</li>
+                                <li class="css-property"><span class="name-property">border:</span> 1px #f98;</li>
+                                <li class="css-property"><span class="name-property">background-color:</span> #fdd;</li>
                             </ul>
 
                             <ul class="container-property">
                                 <li class="css-class">&--serious {
-                                    <li class="css-class"><code class="highlited-text">@extend</code> .error;</li>
-                                    <li class="css-property"><code class="name-property">border-with:</code> 3px;</li>
+                                    <li class="css-class"><span class="highlited-text">@extend</span> .error;</li>
+                                    <li class="css-property"><span class="name-property">border-with:</span> 3px;</li>
                                 }</li>
                             </ul>
                         }</li>
                     </ul>
-                </div>
+                </code>
                 <p>When one class extends another, Sass styles all elements that match the extender as though they also match the class being extended. When one class selector extends another, it works exactly as though you added the extended class to every element in your HTML that already had the extending class. You can just write class="error--serious", and Sass will make sure it’s styled as though it had class="error" as well.</p>
                 <p>Of course, selectors aren’t just used on their own in style rules. Sass knows to extend everywhere the selector is used. This ensures that your elements are styled exactly as if they matched the extended selector.</p>
-                <div class="text-code">
+                <code class="text-code">
                     <ul class="container-property">
                         <li class="css-class">.error:hover {
                             <ul>
-                                <li class="css-property"><code class="name-property">background-color:</code> #f3e;</li>
+                                <li class="css-property"><span class="name-property">background-color:</span> #f3e;</li>
                             </ul>
                         }</li>
                     </ul>
 
                     <ul class="container-property">
                         <li class="css-class">-error--serious{
-                            <li class="css-class"><code class="highlited-text">@extend</code> .error;</li>
-                            <li class="css-property"><code class="name-property">border-width:</code> 3px;</li>
+                            <li class="css-class"><span class="highlited-text">@extend</span> .error;</li>
+                            <li class="css-property"><span class="name-property">border-width:</span> 3px;</li>
                         }</li>
                     </ul>
-                </div>
+                </code>
                 <h3>Heads up!</h3>
                 <p>Extends are resolved after the rest of your stylesheet is compiled. In particular, it happens after <span class="highlited-text">parent selectors</span> are resolved. This means that if you <span class="highlited-text">@extend .error</span>, it won’t affect the inner selector in <span class="highlited-text">.error { &__icon { ... } }</span>. It also means that parent selectors in SassScript can’t see the results of extend.</p>
             </article>    

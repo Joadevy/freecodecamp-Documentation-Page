@@ -1,0 +1,14 @@
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body {
+  min-width: 290px;
+  color: var(--white-letter);
+  background-color: var(--dark-black);
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
