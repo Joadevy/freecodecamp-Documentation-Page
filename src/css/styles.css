@@ -1,3 +1,20 @@
+h1, h2, h3, header {
+  opacity: 87%;
+  font-size: 1.2rem;
+}
+
+p {
+  opacity: 65%;
+}
+
+li {
+  opacity: 87%;
+}
+
+#navbar a {
+  font-size: 1.25rem;
+}
+
 html {
   padding: 0;
   margin: 0;
@@ -11,6 +28,41 @@ body {
   background-color: var(--dark-black);
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.5;
+}
+
+:root {
+  --dark-black: #121212;
+  --white-letter: #FFFFFF;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 3fr;
+  }
+}
+aside #navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: scroll;
+  position: fixed;
+  height: 100vh;
+}
+aside #navbar header {
+  padding: 0rem 2rem;
+}
+aside #navbar a {
+  border-top: 1px solid white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: var(--white-letter);
+  opacity: 65%;
 }
 
 /*# sourceMappingURL=styles.css.map */
