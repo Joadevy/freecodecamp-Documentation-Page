@@ -1,6 +1,17 @@
-h1,h2,h3,header {
+h1 {
     opacity: 87%;
     font-size: 1.2rem;
+}
+
+main {
+    header
+    {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
 }
 
 p {

@@ -13,19 +13,21 @@
     <aside>
         <nav id="navbar">
             <header>
-                <h1>SASS Documentation</h1>
+                <h1><span class="SASS-color">SASS</span> Documentation</h1>
             </header>
-            <a href="#¿What_is_Sass?" class="nav-link">¿What is Sass?</a>
-            <a href="#Style_Rules" class="nav-link">Style Rules</a>
-            <a href="#Nesting" class="nav-link">Nesting</a>
-            <a href="#Variables" class="nav-link">Variables</a>
-            <a href="#Mixins" class="nav-link">Mixins</a>
-            <a href="#Extend" class="nav-link">Extend</a>
-            <a href="#Use" class="nav-link">Use</a>
-            <a href="#Forward" class="nav-link">Forward</a> 
-            <a href="#Import" class="nav-link">Import</a>
-            <a href="#Operators" class="nav-link">Operators</a>  
-            <a href="#Reference" class="nav-link">Reference</a> 
+            <div class="container-links">
+                <a href="#¿What_is_Sass?" class="nav-link">¿What is Sass?</a>
+                <a href="#Style_Rules" class="nav-link">Style Rules</a>
+                <a href="#Nesting" class="nav-link">Nesting</a>
+                <a href="#Variables" class="nav-link">Variables</a>
+                <a href="#Mixins" class="nav-link">Mixins</a>
+                <a href="#Extend" class="nav-link">Extend</a>
+                <a href="#Use" class="nav-link">Use</a>
+                <a href="#Forward" class="nav-link">Forward</a> 
+                <a href="#Import" class="nav-link">Import</a>
+                <a href="#Operators" class="nav-link">Operators</a>  
+                <a href="#Reference" class="nav-link">Reference</a> 
+            </div>
         </nav>
     </aside>
 
@@ -199,13 +201,13 @@
                         }</li>
                     </ul>
                 </code>
-                <h3>Heads up!</h3>
+                <h2>Heads up!</h3>
                 <p>Extends are resolved after the rest of your stylesheet is compiled. In particular, it happens after <span class="highlited-text">parent selectors</span> are resolved. This means that if you <span class="highlited-text">@extend .error</span>, it won’t affect the inner selector in <span class="highlited-text">.error { &__icon { ... } }</span>. It also means that parent selectors in SassScript can’t see the results of extend.</p>
             </article>    
         </section>
         
         <section class="main-section" id="Use">
-            <head>Use</head>
+            <header>Use</header>
             <p>The <span highlited-text>@use</span> rule loads mixins, functions, and variables from other Sass stylesheets, and combines CSS from multiple stylesheets together. Stylesheets loaded by <span class="highlited-text">@use</span> are called "modules". Sass also provides built-in modules full of useful functions.</p>
             <p>The simplest <span class="highlited-text">@use</span> rule is written <span class="highlited-text">@use "<url>"</span>, which loads the module at the given URL. Any styles loaded this way will be included exactly once in the compiled CSS output, no matter how many times those styles are loaded.</p>
         </section>
@@ -221,7 +223,7 @@
             <article>
                 <p>Sass extends CSS's @import rule with the ability to import Sass and CSS stylesheets, providing access to mixins, functions, and variables and combining multiple stylesheets' CSS together. Unlike plain CSS imports, which require the browser to make multiple HTTP requests as it renders your page, Sass imports are handled entirely during compilation.</p>
                 <p>Sass imports have the same syntax as CSS imports, except that they allow multiple imports to be separated by commas rather than requiring each one to have its own @import. Also, in the indented syntax, imported URLs aren’t required to have quotes.</p>
-                <h3>Heads Up!</h3>
+                <h2>Heads Up!</h2>
                 <p>The Sass team discourages the continued use of the @import rule. Sass will gradually phase it out over the next few years, and eventually remove it from the language entirely. Prefer the @use rule instead. (Note that only Dart Sass currently supports @use. Users of other implementations must use the @import rule instead.)</p>
             </article>
         </section>

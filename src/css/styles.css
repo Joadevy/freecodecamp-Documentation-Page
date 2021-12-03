@@ -1,6 +1,13 @@
-h1, h2, h3, header {
+h1 {
   opacity: 87%;
   font-size: 1.2rem;
+}
+
+main header {
+  font-size: 1.75rem;
+}
+main h2 {
+  font-size: 1rem;
 }
 
 p {
@@ -39,6 +46,10 @@ body {
   --white-letter: #FFFFFF;
 }
 
+.SASS-color {
+  color: violet;
+}
+
 body {
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -54,19 +65,36 @@ aside #navbar {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  overflow-y: scroll;
   position: fixed;
   height: 100vh;
 }
 aside #navbar header {
-  padding: 0rem 2rem;
+  background: var(--dark-black);
+  position: fixed;
+  z-index: 10;
+  height: 5rem;
+  padding: 0 2rem;
 }
-aside #navbar a {
+aside #navbar .container-links {
+  margin-top: 5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+aside #navbar .container-links a {
   border-top: 1px solid white;
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
   text-decoration: none;
   color: var(--white-letter);
   opacity: 65%;
+}
+
+.text-code ul {
+  list-style-type: none;
+}
+.text-code .name-property {
+  color: violet;
 }
 
 /*# sourceMappingURL=styles.css.map */
