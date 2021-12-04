@@ -124,7 +124,7 @@
             <article>
                 <p>Mixins allow you to define styles that can be re-used throughout your stylesheet. They make it easy to avoid using non-semantic classes like .float-left, and to distribute collections of styles in libraries.<br>
                     Mixins are defined using the <span class="highlited-text">@mixin at-rule</span>, which is written <span class="highlited-text">@mixin <name> { ... }</span> or <span class="highlited-text">@mixin name(<arguments...>) { ... }</span>. A mixin’s name can be any Sass identifier, and it can contain any statement other than top-level statements. They can be used to encapsulate styles that can be dropped into a single style rule; they can contain style rules of their own that can be nested in other rules or included at the top level of the stylesheet; or they can just serve to modify variables.
-                    Mixins are included into the current context using the <span class="highlited-text">@include</span> at-rule, which is written <span class="highlited-text">@include <name></span> or <span class="highlited text">@include <name>(<arguments...>)</span>, with the name of the mixin being included.</p>
+                    Mixins are included into the current context using the <span class="highlited-text">@include</span> at-rule, which is written <span class="highlited-text">@include <name></span> or <span class="highlited-text">@include <name>(<arguments...>)</span>, with the name of the mixin being included.</p>
                 
                     <code class="text-code">
                         <ul class="container-property">
@@ -138,9 +138,9 @@
                         </ul>
         
                         <ul class="container-property">
-                            <li class="css-class">@mixin horizontal-list{
+                            <li class="css-class"><span class="highlited-text">@mixin</span> horizontal-list{
                                 <ul>
-                                    <li class="css-class">@include reset-list;</li>
+                                    <li class="css-class"><span class="highlited-text">@include</span> reset-list;</li>
                                     <li class="css-class">li {
                                             <ul>
                                                 <li class="css-property"><span class="name-property">display:</span> inline-block;</li>
@@ -165,7 +165,7 @@
         <section class="main-section" id="Extend">
             <header>Extend</header>
             <article>
-                <p>There are often cases when designing a page when one class should have all the styles of another class, as well as its own specific styles. For example, the BEM methodology encourages modifier classes that go on the same elements as block or element classes. But this can create cluttered HTML, it's prone to errors from forgetting to include both classes, and it can bring non-semantic style concerns into your markup. Sass’s @extend rule solves this. It’s written @extend <selector>, and it tells Sass that one selector should inherit the styles of another.</p>
+                <p>There are often cases when designing a page when one class should have all the styles of another class, as well as its own specific styles. For example, the BEM methodology encourages modifier classes that go on the same elements as block or element classes. But this can create cluttered HTML, it's prone to errors from forgetting to include both classes, and it can bring non-semantic style concerns into your markup. Sass’s <span class="highlited-text">@extend</span> rule solves this. It’s written <span class="highlited-text">@extend < selector > </span>, and it tells Sass that one selector should inherit the styles of another.</p>
                 <code class="text-code">
                     <ul class="container-property">
                         <li class="css-class">.error {
@@ -222,9 +222,9 @@
             <header>Import</header>
             <article>
                 <p>Sass extends CSS's @import rule with the ability to import Sass and CSS stylesheets, providing access to mixins, functions, and variables and combining multiple stylesheets' CSS together. Unlike plain CSS imports, which require the browser to make multiple HTTP requests as it renders your page, Sass imports are handled entirely during compilation.</p>
-                <p>Sass imports have the same syntax as CSS imports, except that they allow multiple imports to be separated by commas rather than requiring each one to have its own @import. Also, in the indented syntax, imported URLs aren’t required to have quotes.</p>
+                <p>Sass imports have the same syntax as CSS imports, except that they allow multiple imports to be separated by commas rather than requiring each one to have its own <span class="highlited-text">@import</span>. Also, in the indented syntax, imported URLs aren’t required to have quotes.</p>
                 <h2>Heads Up!</h2>
-                <p>The Sass team discourages the continued use of the @import rule. Sass will gradually phase it out over the next few years, and eventually remove it from the language entirely. Prefer the @use rule instead. (Note that only Dart Sass currently supports @use. Users of other implementations must use the @import rule instead.)</p>
+                <p>The Sass team discourages the continued use of the @import rule. Sass will gradually phase it out over the next few years, and eventually remove it from the language entirely. Prefer the <span class="highlited-text">@use</span> rule instead. (Note that only Dart Sass currently supports @use. Users of other implementations must use the @import rule instead.)</p>
             </article>
         </section>
 
